@@ -16,25 +16,30 @@ A modern, scalable Next.js application built with TypeScript, featuring a modula
 ## 📁 Project Structure
 
 ```
-├── app/                          # Next.js App Router pages
-│   ├── [locale]/                 # Internationalized routes
-│   │   ├── layout.tsx            # Locale layout with NextIntlClientProvider
-│   │   └── page.tsx              # Homepage
-│   ├── globals.css               # Global styles and CSS variables
-│   └── layout.tsx                # Root layout with ThemeProvider
-├── components/                   # UI components
-│   ├── ui/                       # Base UI primitives (Button, Container)
-│   ├── modules/                  # Feature-specific components (Hero, Features)
-│   ├── layouts/                  # Page layout components
-│   └── theme-provider.tsx        # Theme provider component
-├── lib/                          # Utilities and hooks
-│   ├── hooks/                    # Custom React hooks
-│   ├── animation-variants.ts     # Centralized Framer Motion variants
-│   └── utils.ts                  # Utility functions (cn helper)
+├── src/                          # Source code directory
+│   ├── app/                      # Next.js App Router pages
+│   │   ├── [locale]/             # Internationalized routes
+│   │   │   ├── layout.tsx        # Locale layout with NextIntlClientProvider
+│   │   │   └── page.tsx          # Homepage
+│   │   ├── globals.css           # Global styles and CSS variables
+│   │   └── layout.tsx            # Root layout with ThemeProvider
+│   ├── components/               # UI components
+│   │   ├── ui/                   # Base UI primitives (Button, Container)
+│   │   ├── modules/              # Feature-specific components (Hero, Features)
+│   │   ├── layouts/              # Page layout components
+│   │   └── theme-provider.tsx    # Theme provider component
+│   ├── lib/                      # Utilities and hooks
+│   │   ├── hooks/                # Custom React hooks
+│   │   ├── animation-variants.ts # Centralized Framer Motion variants
+│   │   └── utils.ts              # Utility functions (cn helper)
+│   ├── i18n/                     # Internationalization config
+│   │   ├── config.ts             # Shared i18n configuration
+│   │   └── request.ts            # Request-based i18n setup
+│   └── middleware.ts             # Next.js middleware for i18n routing
 ├── messages/                     # i18n translation files
 │   ├── en.json                   # English translations
 │   └── id.json                   # Indonesian translations
-├── docs/reference/                # Project documentation
+├── docs/reference/               # Project documentation
 ├── public/                       # Static assets
 └── stories/                      # Storybook stories
 
@@ -115,21 +120,21 @@ npm run storybook
 
 ### Adding New Colors
 
-Edit `tailwind.config.ts` and `app/globals.css` to add new color variables for both light and dark themes.
+Edit `tailwind.config.ts` and `src/app/globals.css` to add new color variables for both light and dark themes.
 
 ### Adding New Locales
 
 1. Create a new JSON file in `messages/` (e.g., `messages/fr.json`)
-2. Add the locale to `i18n.ts` in the `locales` array
-3. Update the middleware matcher in `middleware.ts`
+2. Add the locale to `src/i18n/config.ts` in the `locales` array
+3. Update the middleware matcher in `src/middleware.ts`
 
 ### Creating New Components
 
 Follow the modular architecture:
 
-- **UI Components:** Add to `components/ui/` with CVA variants
-- **Modules:** Add to `components/modules/` and consume hooks from `lib/hooks/`
-- **Layouts:** Add to `components/layouts/` for reusable page structures
+- **UI Components:** Add to `src/components/ui/` with CVA variants
+- **Modules:** Add to `src/components/modules/` and consume hooks from `src/lib/hooks/`
+- **Layouts:** Add to `src/components/layouts/` for reusable page structures
 
 ## 📚 Documentation
 
