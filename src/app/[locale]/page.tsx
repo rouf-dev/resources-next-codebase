@@ -3,6 +3,7 @@ import { setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/container";
 import { HeroSection } from "@/components/modules/hero-section";
 import { FeaturesSection } from "@/components/modules/features-section";
+import { LocaleSwitcher } from "@/components/modules/locale-switcher";
 
 export default function HomePage({
   params: { locale },
@@ -15,6 +16,11 @@ export default function HomePage({
   return (
     <main className="min-h-screen">
       <Container>
+        {/* Locale Switcher - Example usage */}
+        <div className="flex justify-end pt-8 pb-4">
+          <LocaleSwitcher />
+        </div>
+        
         <HeroSection
           title={t("title")}
           subtitle={t("subtitle")}
