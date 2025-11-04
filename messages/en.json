@@ -1,0 +1,32 @@
+{
+  "homepage": {
+    "title": "Welcome to Resources Next",
+    "subtitle": "A modern Next.js application with TypeScript, Tailwind CSS, and Framer Motion",
+    "description": "This is an example homepage demonstrating our modular architecture with internationalization support.",
+    "cta": {
+      "primary": "Get Started",
+      "secondary": "Learn More"
+    },
+    "features": {
+      "title": "Key Features",
+      "items": {
+        "typescript": {
+          "title": "TypeScript",
+          "description": "Type-safe development for large-scale applications"
+        },
+        "tailwind": {
+          "title": "Tailwind CSS",
+          "description": "Utility-first styling for rapid development"
+        },
+        "animation": {
+          "title": "Framer Motion",
+          "description": "Rich, performant animations and transitions"
+        },
+        "i18n": {
+          "title": "Internationalization",
+          "description": "Built-in multi-language support"
+        }
+      }
+    }
+  }
+}

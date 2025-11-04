@@ -1,0 +1,32 @@
+{
+  "homepage": {
+    "title": "Selamat Datang di Resources Next",
+    "subtitle": "Aplikasi Next.js modern dengan TypeScript, Tailwind CSS, dan Framer Motion",
+    "description": "Ini adalah contoh halaman beranda yang mendemonstrasikan arsitektur modular kami dengan dukungan internasionalisasi.",
+    "cta": {
+      "primary": "Mulai Sekarang",
+      "secondary": "Pelajari Lebih Lanjut"
+    },
+    "features": {
+      "title": "Fitur Utama",
+      "items": {
+        "typescript": {
+          "title": "TypeScript",
+          "description": "Pengembangan type-safe untuk aplikasi skala besar"
+        },
+        "tailwind": {
+          "title": "Tailwind CSS",
+          "description": "Styling utility-first untuk pengembangan cepat"
+        },
+        "animation": {
+          "title": "Framer Motion",
+          "description": "Animasi dan transisi yang kaya dan performa tinggi"
+        },
+        "i18n": {
+          "title": "Internasionalisasi",
+          "description": "Dukungan multi-bahasa bawaan"
+        }
+      }
+    }
+  }
+}
